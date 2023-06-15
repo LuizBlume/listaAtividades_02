@@ -13,13 +13,28 @@
     //ENTRADA
 
     alert("Vamos supor que ocorreu um crime, e você está sendo interrogado pelos policiais.");
-    const telefonou = prompt(`Você telefonou para a vítima? Digite "S" se sim, se não "N"`);
-    const local = prompt(`Você telefonou para a vítima? Digite "S" se sim, se não "N"`)
-    const morar = prompt(`Você telefonou para a vítima? Digite "S" se sim, se não "N"`)
-    const trabalho = prompt(`Você trabalhou com a vítima? Digite "S" se sim, se não "N"`)
+    const telefonou = prompt(`Você telefonou para a vítima? Digite "S" se sim, se não "N"`).trim().toLocaleLowerCase();
+    const local = prompt(`Você esteve no local do crime? Digite "S" se sim, se não "N"`).trim().toLocaleLowerCase();
+    const morar = prompt(`Você mora perto da vítima? Digite "S" se sim, se não "N"`).trim().toLocaleLowerCase();
+    const divida = prompt(`Você para devia para a vítima? Digite "S" se sim, se não "N"`).trim().toLocaleLowerCase();
+    const trabalho = prompt(`Você trabalhou com a vítima? Digite "S" se sim, se não "N"`).trim().toLocaleLowerCase();
     
 
     //PROCESSAMENTO
+
+    let resposta = 0;
+
+    if (telefonou == "S") {
+        resposta = 
+    }
+
+    else {
+        resposta = 
+    }
+
+    if () {
+        
+    }
 
     //SAÍDA
 
