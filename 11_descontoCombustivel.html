@@ -1,3 +1,4 @@
+<meta charset="UTF-8" />
 <script>
     /*
     //PROBLEMA
@@ -14,10 +15,41 @@
     */
 
     //ENTRADA
-
+    
+    const combustivel = prompt(`Qual combustivel voce gostaria? A para alcool e G para gasolina`).trim().toUpperCase();
+    const litros = Number(prompt("Informe a quantidade de litros que você pediu").trim());
 
     //PROCESSAMENTO
 
+    if (combustivel.length > 1) {
+        alert("Opção inválida")
+    }
+
+    else {
+        if (combustivel == "A") {
+            if (litros >= 20) {
+                let preco = litros * 6.10 * 0.3 * litros;
+                alert(`O valor seria de R$${preco.toFixed(2).replace(".", ",")}`);
+            }
+            else {
+                let preço = litros * 6.10 - 6.10 * 0.5 * litros;
+                alert(`O valor seria de R$${preço.toFixed(2).replace(".", ",")}`);
+            }
+        }
+        else if (combustivel == "G") {
+            if (litros <= 20) {
+                let preço = litros * 6.50 - 6.50 * 0.4 * litros;
+                alert(`O valor seria de R$${preço.toFixed(2).replace(".", ",")}`);
+            }
+            else {
+                let preço = litros * 6.50 - 6.50 * 0.6 * litros;
+                alert(`O valor seria de R$${preço.toFixed(2).replace(".", ",")}`);
+            }
+        }
+        else {
+            alert(`Valor inválido.`);
+        }
+    }
     
     //SAÍDA
 

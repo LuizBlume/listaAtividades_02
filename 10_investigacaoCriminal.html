@@ -12,30 +12,27 @@
 
     //ENTRADA
 
-    alert("Vamos supor que ocorreu um crime, e você está sendo interrogado pelos policiais.");
-    const telefonou = prompt(`Você telefonou para a vítima? Digite "S" se sim, se não "N"`).trim().toLocaleLowerCase();
-    const local = prompt(`Você esteve no local do crime? Digite "S" se sim, se não "N"`).trim().toLocaleLowerCase();
-    const morar = prompt(`Você mora perto da vítima? Digite "S" se sim, se não "N"`).trim().toLocaleLowerCase();
-    const divida = prompt(`Você para devia para a vítima? Digite "S" se sim, se não "N"`).trim().toLocaleLowerCase();
-    const trabalho = prompt(`Você trabalhou com a vítima? Digite "S" se sim, se não "N"`).trim().toLocaleLowerCase();
-    
-
+    const telefone = Number(prompt("Telefonou para a vítima? (Informe S ou N)").toUpperCase().replace("S", "1").replace("N", "0").trim());
+    const local = Number(prompt("Esteve no local do crime? (Informe S ou N)").toUpperCase().replace("S", "1").replace("N", "0").trim());
+    const casa = Number(prompt("Mora perto da vítima? (Informe S ou N)").toUpperCase().replace("S", "1").replace("N", "0").trim());
+    const divida = Number(prompt("Devia para a vítima? (Informe S ou N)").toUpperCase().replace("S", "1").replace("N", "0").trim());
+    const trabalho = Number(prompt("Já trabalhou com a vítima? (Informe S ou N)").toUpperCase().replace("S", "1").replace("N", "0").trim());
     //PROCESSAMENTO
 
-    let resposta = 0;
-
-    if (telefonou == "S") {
-        resposta = 
+    if (telefonema.length > 1 || local.length > 1 || moradia.length > 1 || divida.length > 1 || trabalho.length > 1) {
+        alert(`Valor inválido`);
     }
-
     else {
-        resposta = 
+        if (telefone + local + casa + divida + trabalho == 2) {
+            alert(`Classificação: Suspeito.`);
+        }
+        else if (telefone + local + casa + divida + trabalho == 3 || telefonema + local + moradia + divida + trabalho == 4) {
+            alert(`Classificação: Cúmplice.`);
+        }
+        else if (telefone + local + casa + divida + trabalho == 5) {
+            alert(`Classificação: Assasino`);
+        }
+        else {
+            alert(`Classificação: Inocente`);
+        }
     }
-
-    if () {
-        
-    }
-
-    //SAÍDA
-
-</script>
